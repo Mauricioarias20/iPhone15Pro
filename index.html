@@ -1,79 +1,135 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta name="description" content="Proyecto de práctica: iPhone 15 Pro — Diseñado con titanio. Más liviano. Más Pro.">
+    <meta name="description" content="Practice project: iPhone 15 Pro — Designed with titanium. Lighter. More Pro.">
 <meta name="theme-color" content="#0e0e0e">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>iPhone 15 Pro</title>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="apple-logo">
-  <img src="img/apple_logo.png" alt="Apple Logo">
-</header>
+<div id="loading-screen" class="loading-screen">
+  <div class="loading-container">
+    <div class="apple-logo-loader">
+      <img src="img/apple_logo.png" alt="Loading">
+    </div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="apple-logo">
+      <img src="img/apple_logo.png" alt="Apple Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">iPhone 15 Pro</a></li>
+      <li><a href="#specs">Specifications</a></li>
+      <li><a href="#comparacion">Compare</a></li>
+      <li><a href="#order" class="nav-order-link">Order</a></li>
+    </ul>
+    <button class="toggle-mode-btn" id="toggleMode" aria-label="Toggle Light Mode">
+      <span class="toggle-text">Light Mode</span>
+    </button>
+  </div>
+</nav>
 
 <section id="hero" class="hero-apple">
-  <img src="img/iphone_base.png" alt="iPhone 15 Pro" class="phone">
-  <h1>iPhone 15 Pro</h1>
-  <p>Diseñado con titanio. Más liviano. Más Pro.</p>
+  <div class="nav-container hero-content">
+    <h1 class="hero-title">
+      <span class="title-line">iPhone 15 Pro</span>
+    </h1>
+    <p class="hero-subtitle">Designed with titanium.<br>Lighter. More Pro.</p>
+    
+    <div class="phone-container">
+      <img src="img/iphone_base.png" alt="iPhone 15 Pro" class="phone">
+    </div>
 
-  <div class="colores">
-    <div class="color activo" data-img="img/iphone_natural.png" style="background-color:#8f8278;"></div>
-    <div class="color" data-img="img/iphone_black.png" style="background-color:#0b0b0d;"></div>
-    <div class="color" data-img="img/iphone_white.png" style="background-color:#dcdcdc;"></div>
-    <div class="color" data-img="img/iphone_blue.png" style="background-color:#3d4cff;"></div>
+    <div class="colores">
+      <div class="color color-natural activo" data-img="img/iphone_natural.png" title="Natural Titanium">
+        <img src="img/iphone_natural.png" alt="Natural Titanium">
+      </div>
+      <div class="color color-black" data-img="img/iphone_black.png" title="Blue Titanium">
+        <img src="img/iphone_black.png" alt="Blue Titanium">
+      </div>
+      <div class="color color-white" data-img="img/iphone_white.png" title="White Titanium">
+        <img src="img/iphone_white.png" alt="White Titanium">
+      </div>
+      <div class="color color-blue" data-img="img/iphone_blue.png" title="Blue Titanium">
+        <img src="img/iphone_blue.png" alt="Blue Titanium">
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <button class="boton boton-primary">Learn more</button>
+    </div>
   </div>
-
-  <button class="boton">Ver más</button>
 </section>
 
-<section class="specs reveal">
-  <h2>Especificaciones Técnicas</h2>
+<section id="specs" class="specs reveal">
+  <div class="section-header">
+    <h2 class="section-title">Technical Specifications</h2>
+    <p class="section-subtitle">Power and performance without limits</p>
+  </div>
 
   <div class="spec-grid">
 
     <div class="spec-item">
       <img src="img/icon-chip.svg" alt="Chip">
-      <h3>Chip A17 Pro</h3>
-      <p>Arquitectura de 3 nm con GPU de 6 núcleos para rendimiento extremo.</p>
+      <h3>A17 Pro Chip</h3>
+      <p>3nm architecture with 6-core GPU for extreme performance.</p>
     </div>
 
     <div class="spec-item">
-      <img src="img/icon-camera.svg" alt="Cámara">
-      <h3>Cámara Pro 48 MP</h3>
-      <p>Fotografía avanzada con detalle cristalino y zoom óptico mejorado.</p>
+      <img src="img/icon-camera.svg" alt="Camera">
+      <h3>Pro 48 MP Camera</h3>
+      <p>Advanced photography with crystal-clear detail and improved optical zoom.</p>
     </div>
 
     <div class="spec-item">
-      <img src="img/icon-screen.svg" alt="Pantalla">
-      <h3>Pantalla ProMotion</h3>
-      <p>Super Retina XDR de 120Hz para movimiento ultra fluido.</p>
+      <img src="img/icon-screen.svg" alt="Display">
+      <h3>ProMotion Display</h3>
+      <p>Super Retina XDR with 120Hz for ultra-smooth motion.</p>
     </div>
 
     <div class="spec-item">
-      <img src="img/icon-battery.svg" alt="Batería">
-      <h3>Batería de larga duración</h3>
-      <p>Hasta 29 horas de reproducción de video con optimización inteligente.</p>
+      <img src="img/icon-battery.svg" alt="Battery">
+      <h3>Long-lasting Battery</h3>
+      <p>Up to 29 hours of video playback with intelligent optimization.</p>
+    </div>
+
+    <div class="spec-item">
+      <img src="img/icon-chip.svg" alt="Design">
+      <h3>Titanium Design</h3>
+      <p>Aerospace-grade titanium construction for exceptional durability and lightness.</p>
+    </div>
+
+    <div class="spec-item">
+      <img src="img/icon-screen.svg" alt="Connectivity">
+      <h3>USB-C Connectivity</h3>
+      <p>Universal USB-C port for faster charging and versatile connectivity options.</p>
     </div>
 
   </div>
 </section>
 
-<section id="detalles" class="detalles">
-  <h2>Especificaciones</h2>
-
-  <ul>
-    <li>● Diseño de titanio grado aeroespacial</li>
-    <li>● Pantalla Super Retina XDR con ProMotion</li>
-    <li>● Cámara principal de 48 MP</li>
-    <li>● Zoom óptico mejorado</li>
-    <li>● Chip A17 Pro con GPU de nueva generación</li>
-    <li>● Autonomía de batería mejorada</li>
-  </ul>
+<section id="detalles" class="detalles reveal">
+  <div class="section-header">
+    <h2 class="section-title">Key Features</h2>
+  </div>
+  <div class="detalles-content">
+    <ul class="detalles-list">
+      <li><span class="check-icon">✓</span> Aerospace-grade titanium design</li>
+      <li><span class="check-icon">✓</span> Super Retina XDR display with ProMotion</li>
+      <li><span class="check-icon">✓</span> 48 MP main camera</li>
+      <li><span class="check-icon">✓</span> Improved optical zoom</li>
+      <li><span class="check-icon">✓</span> A17 Pro chip with next-generation GPU</li>
+      <li><span class="check-icon">✓</span> Enhanced battery life</li>
+    </ul>
+  </div>
 </section>
 
 <div id="modal" class="modal">
@@ -81,11 +137,11 @@
     <span id="close">&times;</span>
     <h2>iPhone 15 Pro</h2>
     <ul>
-      <li>Diseño de titanio</li>
-      <li>Pantalla Super Retina XDR</li>
-      <li>Cámara Pro de 48MP</li>
-      <li>Chip A17 Bionic</li>
-      <li>Batería de larga duración</li>
+      <li>Titanium design</li>
+      <li>Super Retina XDR display</li>
+      <li>48MP Pro camera</li>
+      <li>A17 Bionic chip</li>
+      <li>Long-lasting battery</li>
     </ul>
   </div>
 </div>
@@ -97,18 +153,21 @@
   </div>
 </div>
 
-<section class="comparacion">
-  <h2>Compará modelos</h2>
+<section id="comparacion" class="comparacion reveal">
+  <div class="section-header">
+    <h2 class="section-title">Compare models</h2>
+    <p class="section-subtitle">Find the perfect iPhone for you</p>
+  </div>
   <div class="modelos-grid">
 
     <div class="modelo-card">
       <img src="img/iphone15_small.png" alt="iPhone 15" class="modelo-img">
       <h3>iPhone 15</h3>
       <ul>
-        <li>Cuerpo de aluminio</li>
-        <li>Cámara principal de 48 MP</li>
-        <li>Pantalla Super Retina XDR</li>
-        <li>Chip A16 Bionic</li>
+        <li>Aluminum body</li>
+        <li>48 MP main camera</li>
+        <li>Super Retina XDR display</li>
+        <li>A16 Bionic chip</li>
       </ul>
     </div>
 
@@ -116,20 +175,92 @@
       <img src="img/iphone15pro_small.png" alt="iPhone 15 Pro" class="modelo-img">
       <h3>iPhone 15 Pro</h3>
       <ul>
-        <li>Diseño de titanio</li>
-        <li>Cámara Pro de 48 MP con Zoom óptico</li>
-        <li>Pantalla ProMotion 120Hz</li>
-        <li>Chip A17 Pro</li>
+        <li>Titanium design</li>
+        <li>48 MP Pro camera with optical zoom</li>
+        <li>ProMotion 120Hz display</li>
+        <li>A17 Pro chip</li>
       </ul>
     </div>
 
   </div>
 </section>
 
+<section id="order" class="order-section reveal">
+  <div class="section-header">
+    <h2 class="section-title">Order iPhone 15 Pro</h2>
+    <p class="section-subtitle">Choose your perfect configuration</p>
+  </div>
+
+  <div class="order-container">
+    <div class="order-preview">
+      <div class="order-phone-display">
+        <img id="order-phone-img" src="img/iphone_natural.png" alt="iPhone 15 Pro" class="order-phone">
+      </div>
+      
+      <div class="order-info">
+        <h3 class="order-model-name">iPhone 15 Pro</h3>
+        <p class="order-description">The most advanced iPhone ever. Built with aerospace-grade titanium. Featuring the A17 Pro chip, Pro camera system, and all-day battery life.</p>
+        
+        <div class="order-specs-summary">
+          <div class="order-spec-item">
+            <span class="spec-label">Display:</span>
+            <span class="spec-value">6.1" Super Retina XDR</span>
+          </div>
+          <div class="order-spec-item">
+            <span class="spec-label">Storage:</span>
+            <span class="spec-value">128GB</span>
+          </div>
+          <div class="order-spec-item">
+            <span class="spec-label">Camera:</span>
+            <span class="spec-value">48MP Pro System</span>
+          </div>
+          <div class="order-spec-item">
+            <span class="spec-label">Chip:</span>
+            <span class="spec-value">A17 Pro</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-config">
+      <div class="order-color-selector">
+        <h4>Choose your finish</h4>
+        <div class="order-colors">
+          <div class="order-color order-color-natural active" data-img="img/iphone_natural.png" data-name="Natural Titanium" data-color="#8f8278">
+            <img src="img/iphone_natural.png" alt="Natural Titanium">
+            <span class="color-name">Natural Titanium</span>
+          </div>
+          <div class="order-color order-color-black" data-img="img/iphone_black.png" data-name="Blue Titanium" data-color="#0b0b0d">
+            <img src="img/iphone_black.png" alt="Blue Titanium">
+            <span class="color-name">Blue Titanium</span>
+          </div>
+          <div class="order-color order-color-white" data-img="img/iphone_white.png" data-name="White Titanium" data-color="#dcdcdc">
+            <img src="img/iphone_white.png" alt="White Titanium">
+            <span class="color-name">White Titanium</span>
+          </div>
+          <div class="order-color order-color-blue" data-img="img/iphone_blue.png" data-name="Blue Titanium" data-color="#3d4cff">
+            <img src="img/iphone_blue.png" alt="Blue Titanium">
+            <span class="color-name">Blue Titanium</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-price-section">
+        <div class="price-display">
+          <span class="price-label">Starting at</span>
+          <span class="price-amount">$999</span>
+        </div>
+        <button class="boton boton-primary order-btn">Buy Now</button>
+        <p class="order-note">Free shipping. Trade in your current iPhone for credit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="apple-footer">
-  <div class="footer-top">
+  <div class="footer-top nav-container">
     <div class="footer-col">
-      <h4>Productos</h4>
+      <h4>Products</h4>
       <ul>
         <li><a href="#hero">iPhone 15</a></li>
         <li><a href="#hero">iPhone 15 Pro</a></li>
@@ -139,27 +270,27 @@
     </div>
 
     <div class="footer-col">
-      <h4>Soporte</h4>
+      <h4>Support</h4>
       <ul>
-        <li><a href="#">Manual del usuario</a></li>
-        <li><a href="https://www.apple.com/legal/warranty/" target="_blank">Garantía</a></li>
-        <li><a href="mailto:soporte@mauricioarias1515@gmail.com">Contacto</a></li>
+        <li><a href="#">User Manual</a></li>
+        <li><a href="https://www.apple.com/legal/warranty/" target="_blank">Warranty</a></li>
+        <li><a href="mailto:soporte@mauricioarias1515@gmail.com">Contact</a></li>
         <li><a href="https://www.apple.com/support/" target="_blank">FAQ</a></li>
       </ul>
     </div>
 
 <div class="footer-col">
-  <h4>Compañía</h4>
+  <h4>Company</h4>
   <ul>
-    <li><a href="https://www.apple.com/la/company/" target="_blank">Acerca de Apple</a></li>
-    <li><a href="https://www.apple.com/jobs/" target="_blank">Carreras</a></li>
-    <li><a href="https://www.apple.com/newsroom/" target="_blank">Prensa</a></li>
-    <li><a href="#">Inversores</a></li>
+    <li><a href="https://www.apple.com/la/company/" target="_blank">About Apple</a></li>
+    <li><a href="https://www.apple.com/jobs/" target="_blank">Careers</a></li>
+    <li><a href="https://www.apple.com/newsroom/" target="_blank">Newsroom</a></li>
+    <li><a href="#">Investors</a></li>
   </ul>
 </div>
 
 <div class="footer-col social">
-  <h4>Síguenos</h4>
+  <h4>Follow Us</h4>
   <ul>
     <li><a href="https://twitter.com/Apple" target="_blank"><img src="img/twitter.svg" alt="Twitter"></a></li>
     <li><a href="https://www.instagram.com/apple/" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a></li>
@@ -167,16 +298,46 @@
   </ul>
 </div>
 
-  <div class="footer-bottom">
-    <p>© 2025 Mauricio Arias. Proyecto de práctica inspirado en Apple.</p>
+  </div>
+  
+  <div class="nav-container">
+    <div class="footer-bottom">
+      <p>© 2025 Mauricio Arias. Practice project inspired by Apple.</p>
+    </div>
   </div>
 </footer>
 
 <div id="contact-modal" class="modal">
   <div class="modal-content">
     <span id="contact-close">&times;</span>
-    <h2>Contacto</h2>
-    <p>Contactar a: <a href="mailto:soporte@mauricioarias1515@gmail.com.com">soporte@mauricioarias1515.com</a></p>
+    <h2>Contact</h2>
+    <p>Contact us at: <a href="mailto:soporte@mauricioarias1515@gmail.com.com">soporte@mauricioarias1515.com</a></p>
+  </div>
+</div>
+
+<div id="order-modal" class="modal">
+  <div class="modal-content">
+    <span id="order-close">&times;</span>
+    <h2>Complete Your Order</h2>
+    <form id="order-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Shipping Address</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="color">Selected Color</label>
+        <input type="text" id="color" name="color" value="Natural Titanium" disabled>
+      </div>
+      <button type="submit" class="boton boton-primary">Complete Purchase</button>
+    </form>
   </div>
 </div>
 
